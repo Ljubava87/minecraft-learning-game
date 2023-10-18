@@ -1,0 +1,328 @@
+h1,
+h4 {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    /* Выберите нужный вес шрифта */
+    color: white;
+}
+
+/* Стили для фона с GIF-анимацией */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Помещаем фон "под" другие элементы */
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Обрезаем изображение под ширину экрана */
+}
+
+/* Стили для контейнера с содержимым */
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Необходимо для центрирования */
+    max-width: 400px;
+    /* Максимальная ширина контейнера */
+    max-height: 700px;
+    margin: 15% auto;
+    /* Центрирование по горизонтали */
+    padding: 20px;
+    background-color: rgba(0, 128, 0, 0.8);
+    /* Зеленый цвет фона для контейнера */
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Помещаем контейнер "над" фоном */
+    border-radius: 5px;
+}
+
+.player-info {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: aliceblue;
+}
+
+
+
+input {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+}
+
+button {
+    color: green;
+    background-color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+    height: 22px;
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(30, 137, 23);
+    border-radius: 5px;
+
+
+}
+
+.player-info input {
+    border-radius: 5px;
+
+}
+
+/* ... существующие стили ... */
+
+.steve-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.steve-dialog img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 12%;
+    /* измените это значение, чтобы подогнать под нужное расположение */
+    right: 6%;
+    max-width: 300px;
+    min-height: 120px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.speech-bubble p {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+
+
+}
+
+#wright-button {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    margin: 10px 0 10px 90px;
+    border: 2px solid green;
+
+
+}
+
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tektur', sans-serif;
+    margin-top: 180px;
+    /* Регулируйте отступ как вам нужно */
+}
+
+.word-square {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    /* Цвет квадратиков слова */
+    margin: 5px;
+    /* Регулируйте отступ как вам нужно */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.letter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Tektur', sans-serif;
+    margin-top: 80px;
+    /* Регулируйте отступ как вам нужно */
+}
+
+.letter-square {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    /* Цвет квадратиков с буквами */
+    margin: 5px;
+    /* Регулируйте отступ как вам нужно */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+[data-letter="A"] {
+    display: none;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-content h1 {
+    font-size: 38px;
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+}
+
+.score-container,
+.timer-container {
+    display: none;
+    position: fixed;
+    /* Используйте fixed, чтобы позиционировать относительно всей страницы */
+    top: 70%;
+    /* Позиционирование по центру по вертикали */
+    left: 50%;
+    /* Позиционирование по центру по горизонтали */
+    transform: translate(-50%, -50%);
+    /* Центрирование элемента */
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    color: rgb(58, 131, 24);
+    border: 2px solid rgb(58, 131, 24);
+    text-shadow: #3c3d3b;
+    background-color: #ffffffd3;
+    border-radius: 5px;
+    width: 340px;
+    text-align: center;
+    padding: 4px;
+    font-size: 40px;
+    /* Исходный размер шрифта */
+    transition: font-size 0.3s ease;
+    /* Добавление анимации изменения размера шрифта */
+
+}
+
+.score-container {
+    top: 83%;
+    /* Позиционирование по центру по вертикали */
+    left: 50%;
+    /* Позиционирование по центру по горизонтали */
+}
+
+.score-container.show-score {
+    display: block;
+}
+
+.show-timer {
+    display: block;
+    font-size: 50px;
+    /* Размер шрифта при появлении */
+}
+
+#play-again-button {
+    display: none;
+    height: 40px;
+    font-family: 'Tektur', sans-serif;
+    font-weight: 600;
+    margin: 10px 0 10px 90px;
+    border: 2px solid green;
+    position: fixed;
+    top: 92%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+
+}
+
+#play-again-button:hover {
+    background-color: #45a049;
+}
+
+.show-score {
+    display: block;
+}
+
+footer {
+
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#right img {
+    height: 60px;
+    margin: 40px;
+}
+
+#right img:hover {
+    opacity: 70%;
+}
+
+#left a,
+#left span {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    font-family: 'Tektur', sans-serif;
+    margin-left: 20px;
+
+}
+
+#left a:hover {
+    color: #838644;
+}

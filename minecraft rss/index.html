@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@600;700;900&display=swap" rel="stylesheet">
+    <title>Minecraft Learning Game</title>
+</head>
+
+<body>
+    <div class="background">
+        <img src="/gif/background.gif" alt="Minecraft Background">
+    </div>
+    <div class="container">
+        <h1>Minecraft Learning Game</h1>
+        <h4>Обучающая игра для маленьких любителей Майнкрафта</h4>
+        <div class="player-info">
+            <label for="player-name">Введите имя игрока:</label>
+            <input type="text" id="player-name" placeholder="Имя Игрока">
+            <button id="start-game-button">Играть</button>
+        </div>
+    </div>
+    <div class="steve-dialog">
+        <img src="/gif/steve.gif" alt="Steve">
+        <div class="speech-bubble">
+            <p id="steve-message"></p>
+            <button id="wright-button">Собрать слово</button>
+        </div>
+
+    </div>
+
+    <div class="timer-container">
+        <span id="timer">30</span> сек
+    </div>
+    <div class="score-container">
+        <span id="score">0</span></span> очков
+    </div>
+    <button id="play-again-button" style="display: none;" onclick="location.reload();">Играть еще</button>
+
+
+    <!-- Добавьте следующий HTML код в ваш файл -->
+    <div class="word-container">
+        <!-- Здесь будут отображаться квадратики для слова -->
+    </div>
+    <div class="letter-container">
+        <!-- Здесь будут отображаться квадратики с буквами для выбора -->
+    </div>
+    <div class="letter-square" draggable="true" data-letter="A">A</div>
+
+
+
+    <footer>
+        <div id="left">
+            <span>&copy; 2023 <a href="https://github.com/Ljubava87" target="_blank">Ljubava87</a></span>
+        </div>
+        <div id="right">
+            <a href="https://rs.school/js-stage0/" target="_blank"><img src="/minecraft rss/images/rsschool.png" alt="logorss"></a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
